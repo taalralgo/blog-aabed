@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <style>
+        h3.heading {
+            display: block;
+            max-width: 75%;
+            text-align: center;
+            margin: 0 auto 30px;
+            font-size: 3rem;
+            word-wrap: break-word;
+            /*text-align: center;*/
+            /*justify-content: center;*/
+            /*font-weight: normal;*/
+            /*line-height: normal;*/
+            /*text-transform: uppercase;*/
+            /*font-family: "Georgia", "Times New Roman", Times, serif;*/
+        }
+    </style>
+{% endblock %}
+
+{% block title %}A propos{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h3 class="heading">
+            Association de Bienfaisance pour l’Education<br/> et le Développement ABED : <br/>Ensemble pour le travail !
+        </h3>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="img1">
+                    <img src="{{ asset('aabed/abedimg2.jpg') }}" alt="ABED">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="img2">
+                    <img src="{{ asset('aabed/abed_img.jpg') }}" alt="Recepisse de déclaration d'association">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="propos">
+            L’Association de Bienfaisance pour l’Education et le Développement (ABED)
+
+            qui a vu le jour depuis Mai 2016 entend dérouler des activités de sensibilisation
+
+            au profit de la communauté rufisquoise à Sébikotane.
+
+            Selon le président Monsieur Abdou Aziz Niang, l’Association de Bienfaisance pour l’Education et le
+            Développement
+
+            travaille sur quatre axes majeurs que sont l’Education, la Santé, le Développement et le travail d’Equipe.
+
+            “Travailler dans l’union et la joie au profit de la communauté” est le credo de l’Association qui a déjà en
+            sa possession son récépissé de reconnaissance officielle.
+
+            L’Association appelle à toutes et à tous pour une adhésion de masse.
+
+            Benno Liguey Rafetal (S’unir, travailler en beauté).
+        </div>
+    </div>
+{% endblock %}

@@ -6,13 +6,13 @@
     <meta name="author" content="Daouda S. THERA"/>
     <meta http-equiv="content-language" content="fr" />
     <meta name="language" content="fr" />
-    <meta property="og:title" content="Aabed" />
+    <meta property="og:title" content="Abed" />
     <meta property="og:language" content="fr" />
     <meta name="description"
           content="Lien permanent pour Association de Bienfaisance pour l’Education et le Développement ABED : Ensemble pour le travail !"/>
     <meta name="generator" content="Symfony 4.3.2" />
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+{#    <link rel="stylesheet" href="{{ asset('css/base.css') }}">#}
     <link href="{{ asset('layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
     {% block stylesheets %}{% endblock %}
 </head>
@@ -48,14 +48,14 @@
         <header id="header" class="hoc clear">
             <!-- ################################################################################################ -->
             <div id="logo" class="fl_left">
-                <h1><a href="{{ path('home') }}">Aabed</a></h1>
+                <h1><a href="{{ path('home') }}">Abed</a></h1>
             </div>
             <nav id="mainav" class="fl_right">
                 <ul class="clear">
                     <li class="active"><a href="{{ path('home') }}">Acceuil</a></li>
                     <li><a href="pages/gallery.html">Articles</a></li>
                     <li><a href="pages/gallery.html">Galerie photo</a></li>
-                    <li><a href="pages/gallery.html">A propos</a></li>
+                    <li><a href="{{ path('about') }}">A propos</a></li>
                     <li><a href="{{ path('contact') }}">Contact</a></li>
                 </ul>
             </nav>
@@ -71,7 +71,7 @@
             <ul class="slides">
                 <li>
                     <article>
-                        <p>AaBED</p>
+                        <p>ABED</p>
                         <h3 class="heading">“Travailler dans l’union et la joie au profit de la communauté”</h3>
                         <p>Association de Bienfaisance pour l’Education et le Développement</p>
                         <footer>
@@ -104,11 +104,11 @@
 <div class="wrapper row4 bgded overlay" style="background-image:url('{{ asset('images/demo/backgrounds/03.png') }}');">
     <footer id="footer" class="hoc clear">
         <!-- ################################################################################################ -->
-        <h3 class="heading">Aabed</h3>
+        <h3 class="heading">Abed</h3>
         <nav>
             <ul class="nospace inline pushright uppercase">
                 <li><a href="{{ path('home') }}"><i class="fa fa-lg fa-home"></i></a></li>
-                <li><a href="#">A propos</a></li>
+                <li><a href="{{ path('about') }}">A propos</a></li>
                 <li><a href="{{ path('contact') }}">Contact</a></li>
 {#                <li><a href="#">Terms</a></li>#}
 {#                <li><a href="#">Privacy</a></li>#}
@@ -133,7 +133,7 @@
 <div class="wrapper row5">
     <div id="copyright" class="hoc clear">
         <!-- ################################################################################################ -->
-        <p class="fl_left">Copyright &copy; 2019 - All Rights Reserved - <a href="{{ path('home') }}">Aabed</a></p>
+        <p class="fl_left">Copyright &copy; 2019 - All Rights Reserved - <a href="{{ path('home') }}">Abed</a></p>
         <p class="fl_right"><a target="_blank" href="https://www.linkedin.com/in/daouda-thera/" title="Mon profil LinkedIn">Daouda S. THERA, developpeur freelance</a></p>
         <!-- ################################################################################################ -->
     </div>
