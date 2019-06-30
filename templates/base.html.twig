@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="author" content="Daouda S. THERA"/>
+    <meta http-equiv="content-language" content="fr" />
+    <meta name="language" content="fr" />
+    <meta property="og:title" content="Aabed" />
+    <meta property="og:language" content="fr" />
     <meta name="description"
           content="Lien permanent pour Association de Bienfaisance pour l’Education et le Développement ABED : Ensemble pour le travail !"/>
     <meta name="generator" content="Symfony 4.3.2" />
@@ -29,8 +33,8 @@
         <div class="fl_right">
             <ul>
                 <li><a href="{{ path('home') }}"><i class="fa fa-lg fa-home"></i></a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="#">Connexion</a></li>
+{#                <li><a href="#">Register</a></li>#}
             </ul>
         </div>
         <!-- ################################################################################################ -->
@@ -46,35 +50,37 @@
         <header id="header" class="hoc clear">
             <!-- ################################################################################################ -->
             <div id="logo" class="fl_left">
-                <h1><a href="index.html">Brickary</a></h1>
+                <h1><a href="{{ path('home') }}">Aabed</a></h1>
             </div>
             <nav id="mainav" class="fl_right">
                 <ul class="clear">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a class="drop" href="#">Pages</a>
-                        <ul>
-                            <li><a href="pages/gallery.html">Gallery</a></li>
-                            <li><a href="pages/full-width.html">Full Width</a></li>
-                            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-                            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="drop" href="#">Dropdown</a>
-                        <ul>
-                            <li><a href="#">Level 2</a></li>
-                            <li><a class="drop" href="#">Level 2 + Drop</a>
-                                <ul>
-                                    <li><a href="#">Level 3</a></li>
-                                    <li><a href="#">Level 3</a></li>
-                                    <li><a href="#">Level 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Level 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Link Text</a></li>
-                    <li><a href="#">Link Text</a></li>
+                    <li class="active"><a href="{{ path('home') }}">Acceuil</a></li>
+{#                    <li><a class="drop" href="#">Pages</a>#}
+{#                        <ul>#}
+{#                            <li><a href="pages/gallery.html">Gallery</a></li>#}
+{#                            <li><a href="pages/full-width.html">Full Width</a></li>#}
+{#                            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>#}
+{#                            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>#}
+{#                            <li><a href="pages/basic-grid.html">Basic Grid</a></li>#}
+{#                        </ul>#}
+{#                    </li>#}
+{#                    <li><a class="drop" href="#">Dropdown</a>#}
+{#                        <ul>#}
+{#                            <li><a href="#">Level 2</a></li>#}
+{#                            <li><a class="drop" href="#">Level 2 + Drop</a>#}
+{#                                <ul>#}
+{#                                    <li><a href="#">Level 3</a></li>#}
+{#                                    <li><a href="#">Level 3</a></li>#}
+{#                                    <li><a href="#">Level 3</a></li>#}
+{#                                </ul>#}
+{#                            </li>#}
+{#                            <li><a href="#">Level 2</a></li>#}
+{#                        </ul>#}
+{#                    </li>#}
+                    <li><a href="pages/gallery.html">Articles</a></li>
+                    <li><a href="pages/gallery.html">Galerie photo</a></li>
+                    <li><a href="pages/gallery.html">A propos</a></li>
+                    <li><a href="pages/gallery.html">Contact</a></li>
                 </ul>
             </nav>
             <!-- ################################################################################################ -->
@@ -84,41 +90,53 @@
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <div id="pageintro" class="hoc clear">
+{#        <div style="text-align:center;">#}
+{#            <h3>#}
+{#                <a style="text-decoration:none;" href="#">#}
+{#                    <span style="color:gray;">Heure actuelle</span>#}
+{#                    <br />#}
+{#                    Dakar, Sénégal#}
+{#                </a>#}
+{#            </h3>#}
+{#            <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=small&timezone=Africa%2FDakar" width="100%" height="90" frameborder="0" seamless>#}
+
+{#            </iframe>#}
+{#        </div>#}
         <!-- ################################################################################################ -->
         <div class="flexslider basicslider">
             <ul class="slides">
                 <li>
                     <article>
-                        <p>Egestas</p>
-                        <h3 class="heading">Elementum dictum</h3>
-                        <p>Cursus mauris vitae ligula accumsan sed</p>
+                        <p>AaBED</p>
+                        <h3 class="heading">“Travailler dans l’union et la joie au profit de la communauté”</h3>
+                        <p>Association de Bienfaisance pour l’Education et le Développement</p>
                         <footer>
-                            <form class="group" method="post" action="#">
-                                <fieldset>
-                                    <legend>Sign-Up:</legend>
-                                    <input type="email" value="" placeholder="Email Here&hellip;">
-                                    <button class="fa fa-sign-in" type="submit" title="Submit"><em>Submit</em></button>
-                                </fieldset>
-                            </form>
+{#                            <form class="group" method="post" action="#">#}
+{#                                <fieldset>#}
+{#                                    <legend>Sign-Up:</legend>#}
+{#                                    <input type="email" value="" placeholder="Email Here&hellip;">#}
+{#                                    <button class="fa fa-sign-in" type="submit" title="Submit"><em>Submit</em></button>#}
+{#                                </fieldset>#}
+{#                            </form>#}
                         </footer>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <p>Pulvinar</p>
-                        <h3 class="heading">Viverra iaculis</h3>
-                        <p>Orci nam nec dolor dapibus dignissim tortor</p>
-                        <footer><a class="btn inverse" href="#">Facilisis etiam</a></footer>
+                        <p>Dakar, SENEGAL</p>
+                        <h3 class="heading">Education, Santé, Développement et le travail d’Equipe.</h3>
+                        <p>Ensemble pour le travail !</p>
+{#                        <footer><a class="btn inverse" href="#">Facilisis etiam</a></footer>#}
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <p>Maximus</p>
-                        <h3 class="heading">Tincidunt viverra</h3>
-                        <p>Sed feugiat tellus quisque vehicula convallis</p>
-                        <footer><a class="btn" href="#">Efficitur convallis</a></footer>
-                    </article>
-                </li>
+{#                <li>#}
+{#                    <article>#}
+{#                        <p>Maximus</p>#}
+{#                        <h3 class="heading">Tincidunt viverra</h3>#}
+{#                        <p>Sed feugiat tellus quisque vehicula convallis</p>#}
+{#                        <footer><a class="btn" href="#">Efficitur convallis</a></footer>#}
+{#                    </article>#}
+{#                </li>#}
             </ul>
         </div>
         <!-- ################################################################################################ -->
@@ -167,7 +185,7 @@
                 </li>
             </ul>
         </div>
-        <p class="center"><a class="btn inverse" href="#">Consequat commodo</a></p>
+        <p class="center"><a class="btn inverse" href="#">Voir tous les articles</a></p>
         <!-- ################################################################################################ -->
         <!-- / main body -->
         <div class="clear"></div>
@@ -176,39 +194,39 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('{{ asset('images/demo/backgrounds/02.png') }}');">
-    <section class="hoc container clear">
-        <!-- ################################################################################################ -->
-        <div class="sectiontitle center">
-            <h3 class="heading">Augue eget iaculis mauris</h3>
-            <p>Morbi sed molestie metus nunc malesuada lorem ut consectetur.</p>
-        </div>
-        <ul class="nospace group center">
-            <li class="one_third first">
-                <article><a href="#"><i class="btmspace-30 icon fa fa-500px"></i></a>
-                    <h6 class="heading font-x1">Sodales sollicitudin</h6>
-                    <p>Cursus elit tristique et sed id convallis arcu sed ac facilisis ligula nec maximus felis imperdiet condimentum [&hellip;]</p>
-                    <footer><a href="#">Read More &raquo;</a></footer>
-                </article>
-            </li>
-            <li class="one_third">
-                <article><a href="#"><i class="btmspace-30 icon fa fa-envira"></i></a>
-                    <h6 class="heading font-x1">Maecenas et bibendum</h6>
-                    <p>Dolor et vestibulum phasellus scelerisque magna sapien non maximus sem faucibus id vestibulum neque eros [&hellip;]</p>
-                    <footer><a href="#">Read More &raquo;</a></footer>
-                </article>
-            </li>
-            <li class="one_third">
-                <article><a href="#"><i class="btmspace-30 icon fa fa-empire"></i></a>
-                    <h6 class="heading font-x1">Placerat ullamcorper</h6>
-                    <p>Ac iaculis eleifend nibh nulla aliquet orci quis urna tristique egestas sed scelerisque dolor ipsum placerat [&hellip;]</p>
-                    <footer><a href="#">Read More &raquo;</a></footer>
-                </article>
-            </li>
-        </ul>
-        <!-- ################################################################################################ -->
-    </section>
-</div>
+{#<div class="wrapper bgded overlay" style="background-image:url('{{ asset('images/demo/backgrounds/02.png') }}');">#}
+{#    <section class="hoc container clear">#}
+{#        <!-- ################################################################################################ -->#}
+{#        <div class="sectiontitle center">#}
+{#            <h3 class="heading">Augue eget iaculis mauris</h3>#}
+{#            <p>Morbi sed molestie metus nunc malesuada lorem ut consectetur.</p>#}
+{#        </div>#}
+{#        <ul class="nospace group center">#}
+{#            <li class="one_third first">#}
+{#                <article><a href="#"><i class="btmspace-30 icon fa fa-500px"></i></a>#}
+{#                    <h6 class="heading font-x1">Sodales sollicitudin</h6>#}
+{#                    <p>Cursus elit tristique et sed id convallis arcu sed ac facilisis ligula nec maximus felis imperdiet condimentum [&hellip;]</p>#}
+{#                    <footer><a href="#">Read More &raquo;</a></footer>#}
+{#                </article>#}
+{#            </li>#}
+{#            <li class="one_third">#}
+{#                <article><a href="#"><i class="btmspace-30 icon fa fa-envira"></i></a>#}
+{#                    <h6 class="heading font-x1">Maecenas et bibendum</h6>#}
+{#                    <p>Dolor et vestibulum phasellus scelerisque magna sapien non maximus sem faucibus id vestibulum neque eros [&hellip;]</p>#}
+{#                    <footer><a href="#">Read More &raquo;</a></footer>#}
+{#                </article>#}
+{#            </li>#}
+{#            <li class="one_third">#}
+{#                <article><a href="#"><i class="btmspace-30 icon fa fa-empire"></i></a>#}
+{#                    <h6 class="heading font-x1">Placerat ullamcorper</h6>#}
+{#                    <p>Ac iaculis eleifend nibh nulla aliquet orci quis urna tristique egestas sed scelerisque dolor ipsum placerat [&hellip;]</p>#}
+{#                    <footer><a href="#">Read More &raquo;</a></footer>#}
+{#                </article>#}
+{#            </li>#}
+{#        </ul>#}
+{#        <!-- ################################################################################################ -->#}
+{#    </section>#}
+{#</div>#}
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -217,7 +235,7 @@
         <!-- ################################################################################################ -->
         <div class="group">
             <section class="one_half first">
-                <h6 class="heading btmspace-50">From The Blog</h6>
+                <h6 class="heading btmspace-50">Derniers articles</h6>
                 <ul class="nospace">
                     <li class="btmspace-30">
                         <article>
@@ -241,14 +259,14 @@
             </section>
             <section class="one_half">
                 <h6 class="heading btmspace-50">Newsletter</h6>
-                <p>Sed a eros ornare pulvinar lorem eget volutpat ex fusce sollicitudin porta erat ac dictum sed nec augue augue praesent congue.</p>
-                <p class="btmspace-30">Ullamcorper neque a bibendum dolor placerat non nulla facilisi nullam ac velit.</p>
+                <p>S'inscrir pour être informer en tant réel lorsqu'un nouvel article est publié .</p>
+{#                <p class="btmspace-30">Ullamcorper neque a bibendum dolor placerat non nulla facilisi nullam ac velit.</p>#}
                 <form id="newsletter" method="post" action="#">
                     <fieldset>
                         <legend>Newsletter:</legend>
-                        <input class="btmspace-15" type="text" value="" placeholder="Name">
-                        <input class="btmspace-15" type="text" value="" placeholder="Email">
-                        <button type="submit" value="submit">Submit</button>
+                        <input class="btmspace-15" type="text" value="" placeholder="Nom complet">
+                        <input class="btmspace-15" type="text" value="" placeholder="Adresse e-mail">
+                        <button type="submit" value="submit">S'inscrire</button>
                     </fieldset>
                 </form>
             </section>
@@ -262,16 +280,16 @@
 <div class="wrapper row4 bgded overlay" style="background-image:url('{{ asset('images/demo/backgrounds/03.png') }}');">
     <footer id="footer" class="hoc clear">
         <!-- ################################################################################################ -->
-        <h3 class="heading">Brickary</h3>
+        <h3 class="heading">Aabed</h3>
         <nav>
             <ul class="nospace inline pushright uppercase">
-                <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="{{ path('home') }}"><i class="fa fa-lg fa-home"></i></a></li>
+                <li><a href="#">A propos</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Cookies</a></li>
-                <li><a href="#">Disclaimer</a></li>
+{#                <li><a href="#">Terms</a></li>#}
+{#                <li><a href="#">Privacy</a></li>#}
+{#                <li><a href="#">Cookies</a></li>#}
+{#                <li><a href="#">Disclaimer</a></li>#}
             </ul>
         </nav>
         <ul class="faico clear">
@@ -291,8 +309,8 @@
 <div class="wrapper row5">
     <div id="copyright" class="hoc clear">
         <!-- ################################################################################################ -->
-        <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
-        <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+        <p class="fl_left">Copyright &copy; 2019 - All Rights Reserved - <a href="{{ path('home') }}">Aabed</a></p>
+        <p class="fl_right"><a target="_blank" href="https://www.linkedin.com/in/daouda-thera/" title="Mon profil LinkedIn">Daouda S. THERA, developpeur freelance</a></p>
         <!-- ################################################################################################ -->
     </div>
 </div>
