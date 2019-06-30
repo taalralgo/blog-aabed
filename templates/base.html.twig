@@ -16,7 +16,6 @@
     <link href="{{ asset('layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
     {% block stylesheets %}{% endblock %}
 </head>
-<body>
 <body id="top">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -96,97 +95,9 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row3 coloured">
-    <main class="hoc container clear">
-        <!-- main body -->
-        <!-- ################################################################################################ -->
-        <div id="introblocks">
-            <ul class="nospace group">
-                <li class="one_third first">
-                    <article>
-                        <div>
-                            <h6 class="heading">Lacinia vivamus lorem</h6>
-                            <p>Ex mauris faucibus libero sed maximus lobortis nunc luctus nisi luctus varius convallis [&hellip;]</p>
-                        </div>
-                        <img src="{{ asset('images/demo/320x180.png') }}" alt="">
-                        <footer><a href="#">More Details</a></footer>
-                    </article>
-                </li>
-                <li class="one_third">
-                    <article>
-                        <div>
-                            <h6 class="heading">Aliquam dolor blandit</h6>
-                            <p>Posuere lectus leo facilisis nisi nunc nibh nibh consectetur vel consectetur consequat eget neque [&hellip;]</p>
-                        </div>
-                        <img src="{{ asset('images/demo/320x180.png') }}" alt="">
-                        <footer><a href="#">More Details</a></footer>
-                    </article>
-                </li>
-                <li class="one_third">
-                    <article>
-                        <div>
-                            <h6 class="heading">Nibh aliquam imperdiet</h6>
-                            <p>Dolor in turpis ultricies faucibus nunc eu turpis lobortis iaculis suspendisse vel tincidunt lectus [&hellip;]</p>
-                        </div>
-                        <img src="{{ asset('images/demo/320x180.png') }}" alt="">
-                        <footer><a href="#">More Details</a></footer>
-                    </article>
-                </li>
-            </ul>
-        </div>
-        <p class="center"><a class="btn inverse" href="#">Voir tous les articles</a></p>
-        <!-- ################################################################################################ -->
-        <!-- / main body -->
-        <div class="clear"></div>
-    </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-    <div class="hoc container clear">
-        <!-- ################################################################################################ -->
-        <div class="group">
-            <section class="one_half first">
-                <h6 class="heading btmspace-50">Derniers articles</h6>
-                <ul class="nospace">
-                    <li class="btmspace-30">
-                        <article>
-                            <h4 class="nospace"><a href="#">Facilisis mauris tellus gravida elit ac eleifend nunc lorem</a></h4>
-                            <time class="font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
-                        </article>
-                    </li>
-                    <li class="btmspace-30">
-                        <article>
-                            <h4 class="nospace"><a href="#">Felis turpis semper at velit non porttitor semper libero</a></h4>
-                            <time class="font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <h4 class="nospace"><a href="#">Dignissim arcu nec vulputate purus semper aliquam rhoncus</a></h4>
-                            <time class="font-xs" datetime="2045-04-04">Wednesday, 4<sup>th</sup> April 2045</time>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-            <section class="one_half">
-                <h6 class="heading btmspace-50">Newsletter</h6>
-                <p>S'inscrir pour être informer en tant réel lorsqu'un nouvel article est publié .</p>
-{#                <p class="btmspace-30">Ullamcorper neque a bibendum dolor placerat non nulla facilisi nullam ac velit.</p>#}
-                <form id="newsletter" method="post" action="#">
-                    <fieldset>
-                        <legend>Newsletter:</legend>
-                        <input class="btmspace-15" type="text" value="" placeholder="Nom complet">
-                        <input class="btmspace-15" type="text" value="" placeholder="Adresse e-mail">
-                        <button type="submit" value="submit">S'inscrire</button>
-                    </fieldset>
-                </form>
-            </section>
-        </div>
-        <!-- ################################################################################################ -->
-    </div>
-</div>
+
+{% block body %}{% endblock %}
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -236,8 +147,6 @@
 <script src="{{ asset('layout/scripts/jquery.backtotop.js') }}"></script>
 <script src="{{ asset('layout/scripts/jquery.mobilemenu.js') }}"></script>
 <script src="{{ asset('layout/scripts/jquery.flexslider-min.js') }}"></script>
-</body>
-{% block body %}{% endblock %}
 {% block javascripts %}{% endblock %}
 </body>
 </html>
