@@ -27,12 +27,12 @@ class ContactController extends AbstractController
             $email = $_POST['email'];
             $objet = $_POST['objet'];
             $messages = $_POST['message'];
-            $to = 'mohamedlam.mlt@gmail.com';
+            $to = 'cherifabdoulaziz@gmail.com';
             $subject = $objet;
             $message = $messages;
             $headers = array(
 //                'From' => $email,
-                'From' => 'mohamedlam.mlt@gmail.com',
+                'From' => $email,
                 'Reply-To' => $email,
                 'X-Mailer' => 'PHP/' . phpversion()
             );

@@ -53,10 +53,10 @@
             <nav id="mainav" class="fl_right">
                 <ul class="clear">
                     <li class="active"><a href="{{ path('home') }}">Acceuil</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="{{ path('gallery') }}">Galerie photo</a></li>
-                    <li><a href="{{ path('about') }}">A propos</a></li>
-                    <li><a href="{{ path('contact') }}">Contact</a></li>
+{#                    <li class="article"><a href="{{ path('article_index') }}">Articles</a></li>#}
+                    <li class="galerie"><a href="{{ path('gallery') }}">Galerie photo</a></li>
+                    <li class="about"><a href="{{ path('about') }}">A propos</a></li>
+                    <li class="contact"><a href="{{ path('contact') }}">Contact</a></li>
                 </ul>
             </nav>
             <!-- ################################################################################################ -->
@@ -139,6 +139,7 @@
 <script src="{{ asset('layout/scripts/jquery.backtotop.js') }}"></script>
 <script src="{{ asset('layout/scripts/jquery.mobilemenu.js') }}"></script>
 <script src="{{ asset('layout/scripts/jquery.flexslider-min.js') }}"></script>
+<script src="{{ asset('js/base.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 {% block javascripts %}{% endblock %}
 </body>

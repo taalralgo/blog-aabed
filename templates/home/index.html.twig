@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Acceuil{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/threearticle.js') }}"></script>
+{% endblock %}
 
 {% block body %}
 
@@ -13,39 +16,39 @@
                     <li class="one_third first">
                         <article>
                             <div>
-                                <h6 class="heading">Lacinia vivamus lorem</h6>
-                                <p>Ex mauris faucibus libero sed maximus lobortis nunc luctus nisi luctus varius
+                                <h6 class="heading titre1">Lacinia vivamus lorem</h6>
+                                <p class="content1">Ex mauris faucibus libero sed maximus lobortis nunc luctus nisi luctus varius
                                     convallis [&hellip;]</p>
                             </div>
                             <img src="{{ asset('images/demo/320x180.png') }}" alt="">
-                            <footer><a href="#">More Details</a></footer>
+                            <footer><a class="nbreComment1">More Details</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
                         <article>
                             <div>
-                                <h6 class="heading">Aliquam dolor blandit</h6>
-                                <p>Posuere lectus leo facilisis nisi nunc nibh nibh consectetur vel consectetur
+                                <h6 class="heading titre2">Aliquam dolor blandit</h6>
+                                <p class="content2">Posuere lectus leo facilisis nisi nunc nibh nibh consectetur vel consectetur
                                     consequat eget neque [&hellip;]</p>
                             </div>
                             <img src="{{ asset('images/demo/320x180.png') }}" alt="">
-                            <footer><a href="#">More Details</a></footer>
+                            <footer><a class="nbreComment2">More Details</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
                         <article>
                             <div>
-                                <h6 class="heading">Nibh aliquam imperdiet</h6>
-                                <p>Dolor in turpis ultricies faucibus nunc eu turpis lobortis iaculis suspendisse vel
+                                <h6 class="heading titre3">Nibh aliquam imperdiet</h6>
+                                <p class="content3">Dolor in turpis ultricies faucibus nunc eu turpis lobortis iaculis suspendisse vel
                                     tincidunt lectus [&hellip;]</p>
                             </div>
                             <img src="{{ asset('images/demo/320x180.png') }}" alt="">
-                            <footer><a href="#">More Details</a></footer>
+                            <footer><a class="nbreComment3">Commentaire : </a></footer>
                         </article>
                     </li>
                 </ul>
             </div>
-            <p class="center"><a class="btn inverse" href="#">Voir tous les articles</a></p>
+{#            <p class="center"><a class="btn inverse" href="#">Voir tous les articles</a></p>#}
             <!-- ################################################################################################ -->
             <!-- / main body -->
             <div class="clear"></div>
@@ -63,23 +66,23 @@
                     <ul class="nospace">
                         <li class="btmspace-30">
                             <article>
-                                <h4 class="nospace"><a href="#">Facilisis mauris tellus gravida elit ac eleifend nunc
+                                <h4 class="nospace"><a class="titre1" >Facilisis mauris tellus gravida elit ac eleifend nunc
                                         lorem</a></h4>
-                                <time class="font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+                                <time class="font-xs date1" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
                             </article>
                         </li>
                         <li class="btmspace-30">
                             <article>
-                                <h4 class="nospace"><a href="#">Felis turpis semper at velit non porttitor semper
+                                <h4 class="nospace"><a class="titre2" >Felis turpis semper at velit non porttitor semper
                                         libero</a></h4>
-                                <time class="font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+                                <time class="font-xs date2" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
                             </article>
                         </li>
                         <li>
                             <article>
-                                <h4 class="nospace"><a href="#">Dignissim arcu nec vulputate purus semper aliquam
+                                <h4 class="nospace"><a class="titre3" >Dignissim arcu nec vulputate purus semper aliquam
                                         rhoncus</a></h4>
-                                <time class="font-xs" datetime="2045-04-04">Wednesday, 4<sup>th</sup> April 2045</time>
+                                <time class="font-xs date3" datetime="2045-04-04">Wednesday, 4<sup>th</sup> April 2045</time>
                             </article>
                         </li>
                     </ul>
