@@ -53,7 +53,7 @@
             <nav id="mainav" class="fl_right">
                 <ul class="clear">
                     <li class="active"><a href="{{ path('home') }}">Acceuil</a></li>
-                    <li><a href="pages/gallery.html">Articles</a></li>
+                    <li><a href="#">Articles</a></li>
                     <li><a href="{{ path('gallery') }}">Galerie photo</a></li>
                     <li><a href="{{ path('about') }}">A propos</a></li>
                     <li><a href="{{ path('contact') }}">Contact</a></li>
@@ -91,10 +91,6 @@
     </div>
     <!-- ################################################################################################ -->
 </div>
-<!-- End Top Background Image Wrapper -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 
 {% block body %}{% endblock %}
 
@@ -110,10 +106,6 @@
                 <li><a href="{{ path('home') }}"><i class="fa fa-lg fa-home"></i></a></li>
                 <li><a href="{{ path('about') }}">A propos</a></li>
                 <li><a href="{{ path('contact') }}">Contact</a></li>
-{#                <li><a href="#">Terms</a></li>#}
-{#                <li><a href="#">Privacy</a></li>#}
-{#                <li><a href="#">Cookies</a></li>#}
-{#                <li><a href="#">Disclaimer</a></li>#}
             </ul>
         </nav>
         <ul class="faico clear">
@@ -147,6 +139,7 @@
 <script src="{{ asset('layout/scripts/jquery.backtotop.js') }}"></script>
 <script src="{{ asset('layout/scripts/jquery.mobilemenu.js') }}"></script>
 <script src="{{ asset('layout/scripts/jquery.flexslider-min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>

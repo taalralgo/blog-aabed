@@ -21,11 +21,14 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('contact/css/main.css') }}">
 {% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/contact.js') }}"></script>
+{% endblock %}
 
 {% block body %}
     <div class="container-contact100">
         <div class="wrap-contact100">
-            <form class="contact100-form validate-form">
+            <form method="post" class="contact100-form validate-form sendMail">
 				<span class="contact100-form-title">
 					Envoyer un message
 				</span>
@@ -36,7 +39,7 @@
                     <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-                    <input class="input100" type="text" name="last-name" placeholder="Nom">
+                    <input id="nom" class="input100" type="text" name="last-name" placeholder="Nom">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -46,7 +49,13 @@
                     <span class="focus-input100"></span>
                 </div>
 
-                <label class="label-input100" for="phone">Numéro de téléphone</label>
+                <label class="label-input100" for="email">Objet *</label>
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input id="objet" class="input100" type="text" name="objet" placeholder="Objet du message">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="phone">Numéro de téléphone *</label>
                 <div class="wrap-input100">
                     <input id="phone" class="input100" type="text" name="phone" placeholder="Ex. +221 77 777 77 77">
                     <span class="focus-input100"></span>
@@ -59,7 +68,7 @@
                 </div>
 
                 <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
+                    <button id="envoyer" class="contact100-form-btn">
                         Envoyer
                     </button>
                 </div>
