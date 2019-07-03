@@ -1,41 +1,90 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Article index{% endblock %}
+{% extends 'admin.html.twig' %}
+{% block stylesheets %}
+    <style>
+        .btn-self {
+            margin: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock %}
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tableau').DataTable({
+                "reponsive": true,
+                "pageLength": 10,
+                "language": {
+                    "decimal": "",
+                    "loadingRecords": "Chargement...",
+                    "processing": "En traitement...",
+                    "lengthMenu": "Afficher _MENU_ entrées",
+                    "zeroRecords": "Aucun enregistrements correspondants trouvés",
+                    "emptyTable": "aucune donnée disponible",
+                    "infoFiltered": "(filtré de _MAX_ entrées totales)",
+                    "infoEmpty": "Affiche 0 à 0 sur 0 entrées",
+                    "info": "Affiche _START_ à _END_ sur _TOTAL_ entrées",
+                    "search": "Rechercher : ",
+                    "paginate": {
+                        "first": "Premier",
+                        "last": "Dernier",
+                        "previous": "Précédent",
+                        "next": "Suivant"
+                    }
+                }
+            });
+        });
+    </script>
+{% endblock %}
 
 {% block body %}
-    <h1>Article index</h1>
+    <h1 style="text-align:center;margin-bottom: 10px;">Gestion des articles</h1>
+    <div class="mb-5">
 
-    <table class="table">
-        <thead>
+        <table id="tableau" class="table">
+            <thead>
             <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>CreatedAt</th>
-                <th>UpdateAt</th>
+                {#                <th>Id</th>#}
+                <th>Titre de l'article</th>
+                {#                <th>Content</th>#}
+                <th>Date de création</th>
+                <th>Date de modification</th>
                 <th>actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td>{{ article.id }}</td>
-                <td>{{ article.title }}</td>
-                <td>{{ article.content }}</td>
-                <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ article.updateAt ? article.updateAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    {#                <td>{{ article.id }}</td>#}
+                    <td>{{ article.title }}</td>
+                    {#                <td>{{ article.content }}</td>#}
+                    <td>{{ article.createdAt ? article.createdAt|date('d-m-Y H:i:s') : '' }}</td>
+                    <td>{{ article.updateAt ? article.updateAt|date('d-m-Y H:i:s') : '' }}</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{ path('article_show', {'id': article.id}) }}">Voir</a>
+                        <a class="btn btn-warning" href="{{ path('article_edit', {'id': article.id}) }}">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <a href="{{ path('article_new') }}">Create new</a>
+        <a class="btn btn-primary btn-self" href="{{ path('article_new') }}">Créer un nouvel article</a>
+    </div>
 {% endblock %}

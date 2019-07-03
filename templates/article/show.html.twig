@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Article{% endblock %}
 
@@ -8,31 +8,31 @@
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>Identifiant</th>
                 <td>{{ article.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>Titre</th>
                 <td>{{ article.title }}</td>
             </tr>
+{#            <tr>#}
+{#                <th>Content</th>#}
+{#                <td>{{ article.content }}</td>#}
+{#            </tr>#}
             <tr>
-                <th>Content</th>
-                <td>{{ article.content }}</td>
-            </tr>
-            <tr>
-                <th>CreatedAt</th>
+                <th>Date de création</th>
                 <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>UpdateAt</th>
+                <th>Date de modification</th>
                 <td>{{ article.updateAt ? article.updateAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('article_index') }}">back to list</a>
+{#    <a href="{{ path('article_index') }}">Liste des articles</a>#}
 
-    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+{#    <a href="{{ path('article_edit', {'id': article.id}) }}">Modifier</a>#}
 
     {{ include('article/_delete_form.html.twig') }}
 {% endblock %}

@@ -4,6 +4,7 @@ $.ajax({
     dataType: 'json',
     success: function (data) {
         if (data) {
+            console.log(data);
             $.each(data, function( index, value ) {
                 if(index === 0) {
                     $('.titre1').text(value.title);
