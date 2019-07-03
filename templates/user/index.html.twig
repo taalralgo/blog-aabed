@@ -1,0 +1,37 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <h1>Gestion utilisateur</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Identifiant</th>
+                <th>Nom d'utilisateur</th>
+{#                <th>Password</th>#}
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+{#                <td>{{ user.password }}</td>#}
+                <td>
+                    <a class="btn btn-primary" href="{{ path('user_show', {'id': user.id}) }}">Voir</a>
+                    <a class="btn btn-warning" href="{{ path('user_edit', {'id': user.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" style="margin-top: 40px;" href="{{ path('user_new') }}">Créer un nouvel utilisateur</a>
+{% endblock %}

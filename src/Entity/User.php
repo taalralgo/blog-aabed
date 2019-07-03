@@ -3,10 +3,15 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(
+ *     fields={"username"},
+ *     message="Ce nom d'utilisateur existe déjà"
+ * )
  */
 class User implements UserInterface, \Serializable
 {
@@ -19,6 +24,7 @@ class User implements UserInterface, \Serializable
 
     /**
      * @ORM\Column(type="string", length=100)
+//     * @ORM\Column(name="email", type="string", length=100, unique=true)
      */
     private $username;
 

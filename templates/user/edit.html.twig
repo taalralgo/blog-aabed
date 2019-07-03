@@ -1,0 +1,10 @@
+{% extends 'admin.html.twig' %}
+
+{% block body %}
+    <h1>Modification d'utilisateur</h1>
+
+    {{ include('user/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+
+    {{ include('user/_delete_form.html.twig') }}
+{% endblock %}
